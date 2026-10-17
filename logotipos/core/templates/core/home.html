@@ -1,0 +1,115 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block metadesc %}Somos Refill Creativo, nos dedicamos al merketing digital desde 2013. Esta sección incluye nuestros servicios y portafolio de proyectos{% endblock metadesc %}
+
+{% block title %}Diseño de Logotipos{% endblock %}
+
+
+{% block titulo %}Diseño de logotipos{% endblock titulo %}
+    
+
+{% block content %}
+
+<!-- Cabecera Inicio -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'core/img/Servicio-branding.webp' %}" alt="{{ title }}">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Diseño de Logotipos que definen </span>
+          <span class="section-heading-lower">la esencia de tu Marca</span>
+        </h2>
+        <p class="mb-3">Tu identidad visual es la primera impresión que el mundo tiene de tu negocio. En Refill Creativo, creamos identidades memorables mediante un diseño de logotipos estratégico, pensado para conectar con tu audiencia y destacar en tu industria.
+        </p>
+        <div class="intro-button mx-auto">
+          <a class="btn btn-primary btn-xl" href="{% url 'contacto' %}">Cotiza tu Logotipo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección valores -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'core/img/servicio-diseno-logotipos.webp' %}" alt="{{ title }}">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">¿Por qué invertir </span>
+          <span class="section-heading-lower">en un diseño de logotipos profesional?</span>
+        </h2>
+        <p class="mb-3">Un logotipo no es solo una imagen o un icono bonito; es el activo visual más importante de tu empresa. Un buen diseño transmite confianza, profesionalismo y los valores fundamentales de tu proyecto.</p>
+         <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">¿Listo para dar el siguiente paso?</span>
+        </h2>
+        <div class="intro-button mx-auto">
+          <a class="btn btn-primary btn-xl" href="{% url 'contacto' %}">Habla con nuestro equipo de diseño</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección servicios -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'core/img/Servicio-identidad-corporativa.webp' %}" alt="">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Una solución integral</span>
+          <span class="section-heading-lower">para tu presencia digital</span>
+        </h2>
+        <p class="mb-3">El diseño de logotipos es solo el punto de partida. Para que una marca realmente crezca, necesita un ecosistema digital sólido y bien estructurado. Desde la concepción de la identidad visual hasta la implementación en aplicaciones web dinámicas y campañas de posicionamiento.
+        </p>
+        <div class="intro-button mx-auto">
+          <a class="btn btn-primary btn-xl" href="{% url 'servicios' %}">Explora todos nuestros servicios</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección blog -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'core/img/Servicio-manual-de-identidad.webp' %}" alt="">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Aprende más sobre branding y diseño</span>
+        </h2>
+        <p class="mb-3">El mundo del diseño digital evoluciona constantemente. Las tendencias cambian, pero los principios de un buen diseño de logotipos se mantienen firmes. Mantente actualizado con nuestras guías, análisis de rediseños famosos y consejos técnicos para aplicar tu logotipo correctamente en cualquier formato.
+        </p>
+        <div class="intro-button mx-auto">
+          <a class="btn btn-primary btn-xl" href="#">Los últimos artículos en nuestro blog</a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mensaje -->
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Construyamos juntos la identidad </span>
+            <span class="section-heading-lower">que tu negocio merece</span>
+          </h2>
+          <p class="mb-0">Tu marca tiene una historia única que contar. Déjanos traducirla en un concepto visual potente, escalable y listo para dominar el mercado.</p>
+          <div class="intro-button mx-auto">
+            <a class="btn btn-primary btn-xl" href="{% url 'contacto' %}">Contáctanos y comencemos a diseñar</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

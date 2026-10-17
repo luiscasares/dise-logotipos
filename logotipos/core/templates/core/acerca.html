@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Historia{% endblock %}
+
+{% block metadesc %}Refill Creativo Agencia de branding con experiencia en marca personal, corporativo e industria{% endblock metadesc %}
+{% block titulo %}Agencia de diseño{% endblock titulo %}  
+
+{% block content %}
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'core/img/fondo-acerca.webp' %}" alt="{{ titulo }}">
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">Diseño de logotipos</span>
+              <span class="section-heading-lower">Conoce nuestra propuesta</span>
+            </h2>
+            <p>¡Hola! En Refill Creativo entendemos a la perfección que tu proyecto no es solo un negocio, es el resultado de tu esfuerzo, tiempo y pasión. Sabemos que confiar la identidad de tu marca a alguien más puede ser un paso que genere dudas, por eso, durante nuestros 15 años de experiencia diseñando logotipos, nos hemos enfocado en escucharte primero. Nos ponemos en tus zapatos para capturar la verdadera esencia de lo que haces, traduciendo tus ideas en un ADN visual empático y humano que conecte genuinamente con tu audiencia, asegurándonos de que te sientas acompañado, comprendido y orgulloso en cada etapa del proceso creativo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mensaje -->
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Construyamos la identidad </span>
+            <span class="section-heading-lower">que tu marca merece</span>
+          </h2>
+          <p class="mb-0">Tu marca tiene una historia única que contar. Déjanos traducirla en un concepto visual potente, escalable y listo para dominar el mercado.</p>
+          <div class="intro-button mx-auto">
+            <a class="btn btn-primary btn-xl" href="{% url 'contacto' %}">Contáctanos y comencemos a diseñar</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

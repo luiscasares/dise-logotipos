@@ -1,0 +1,56 @@
+{% if whatsapp_config.telefono %}
+<a href="{{ whatsapp_config.get_whatsapp_url }}" 
+   id="wa-floating-btn" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="btn-whatsapp-flotante"
+   title="Contáctanos por WhatsApp">
+    
+    <i class="fa fa-whatsapp"></i>
+</a>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const waBtn = document.getElementById('wa-floating-btn');
+    
+    if (waBtn) {
+        waBtn.addEventListener('click', function(e) {
+            
+            // 1. Disparador del evento clave en Google Analytics 4
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Contacto',
+                    'event_label': 'WhatsApp_Flotante_Agencia',
+                    'value': 1
+                });
+            }
+
+            // 2. Disparador de la actualización en la Base de Datos Django
+            fetch("{% url 'whatsappconfig:track_click' %}", {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken'),
+                    'Content-Type': 'application/json'
+                }
+            }).catch(error => console.error('Error al registrar clic:', error));
+        });
+    }
+
+    // Extractor del token CSRF requerido por Django para peticiones POST
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>
+{% endif %}
