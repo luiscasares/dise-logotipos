@@ -1,0 +1,17 @@
+asgiref==3.12.1
+astroid==4.0.4
+dill==0.4.1
+Django==6.0.7
+django-ckeditor-5==0.2.20
+django-js-asset==4.0.1
+isort==8.0.1
+mccabe==0.7.0
+pillow==12.3.0
+platformdirs==4.10.0
+pylint==4.0.6
+pylint-celery==0.3
+pylint-django==2.8.0
+pylint-plugin-utils==0.9.0
+python-dotenv==1.2.3
+sqlparse==0.5.5
+tomlkit==0.15.0
